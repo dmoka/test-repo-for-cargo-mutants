@@ -46,3 +46,8 @@ impl Default for Foo {
         Foo::new()
     }
 }
+
+#[test]
+fn test1() {
+    assert!(true);
+}
