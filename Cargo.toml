@@ -2,5 +2,6 @@
 members = [
     "main",
     "main2",
-    "utils"
+    "utils",
+    "delete-statement"
 ]

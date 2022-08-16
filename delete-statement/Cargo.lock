@@ -3,18 +3,7 @@
 version = 3
 
 [[package]]
-name = "delete-statement"
-version = "0.1.0"
-
-[[package]]
 name = "main"
-version = "0.1.0"
-dependencies = [
- "utils",
-]
-
-[[package]]
-name = "main2"
 version = "0.1.0"
 dependencies = [
  "utils",
