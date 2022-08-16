@@ -1,8 +1,5 @@
 use std::fmt;
 
-#[cfg(test)]
-use mutagen::mutate;
-
 pub struct EventBus {
 
 }
