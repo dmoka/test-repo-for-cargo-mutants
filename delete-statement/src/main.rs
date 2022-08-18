@@ -32,18 +32,14 @@ impl Main {
 
         repo.store("data from do_logic");
 
-        number = number + 10;
-
         number
     }
 
     #[cfg_attr(test, mutate)]
     pub fn do_logic2(repo: &mut Repository, mut number: u32) -> u32 {
-        number = number + 5;
+        number = number + 10;
 
         repo.store("data from do_logic2");
-
-        number = number + 20;
 
         number
     }
@@ -54,7 +50,7 @@ fn main() {
 
 
 #[test]
-fn do_logic_should_increment_number_with_15() {
+fn do_logic_should_increment_number_with_5() {
     //Arrange
     let mut repo = Repository{
         data: Vec::<String>::new()
@@ -66,7 +62,7 @@ fn do_logic_should_increment_number_with_15() {
     let modified_number = Main::do_logic(&mut repo, number);
 
     //Assert
-    assert_eq!(modified_number, number + 15);
+    assert_eq!(modified_number, number + 5);
 }
 
 
@@ -88,7 +84,7 @@ fn do_logic_should_store_data() {
 
 
 #[test]
-fn do_logic2_should_increment_number_with_25() {
+fn do_logic2_should_increment_number_with_10() {
     //Arrange
     let mut repo = Repository{
         data: Vec::<String>::new()
@@ -100,5 +96,5 @@ fn do_logic2_should_increment_number_with_25() {
     let modified_number = Main::do_logic2(&mut repo, number);
 
     //Assert
-    assert_eq!(modified_number, number + 25);
+    assert_eq!(modified_number, number + 10);
 }
