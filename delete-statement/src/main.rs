@@ -41,7 +41,7 @@ impl Main {
     pub fn do_logic2(repo: &mut Repository, mut number: u32) -> u32 {
         number = number + 5;
 
-        repo.store("data from do_logic");
+        repo.store("data from do_logic2");
 
         number = number + 20;
 
